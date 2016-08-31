@@ -1,9 +1,10 @@
-package br.com.fiap.bean;
+package br.com.fiap.ejbws;
 
 import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
+import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -13,6 +14,7 @@ import br.com.fiap.interceptor.MonitorInterceptor;
 
 @Stateless
 @Interceptors({ MonitorInterceptor.class })
+@WebService(serviceName = "Comentario", portName = "ComentarioPort", endpointInterface = "br.com.fiap.ejbws.ComentariosBeanRemote", targetNamespace = "http://jaxws.comentarios.fiap.com.br")
 public class ComentariosBean implements ComentariosBeanRemote {
 	@PersistenceContext(unitName = "fiapPU")
 	private EntityManager em;
