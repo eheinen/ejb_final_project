@@ -5,7 +5,9 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -29,16 +31,35 @@ public class ComentariosMB {
 		this.comentario = comentario;
 	}
 
-	public void adicionarComentario() {
+	private boolean camposObrigatoriosValidados(){
+		if (comentario != null) {
+			if (comentario.getAssunto() == null || comentario.getAssunto().isEmpty())
+				return false;
+			if (comentario.getTitulo() == null || comentario.getTitulo().isEmpty())
+				return false;
+		}else{
+			return false;
+		}
+		return true;
+	}
+
+	public String adicionarComentario() {
 		try {
-			if (comentario != null && comentario.getAssunto() != null) {
-				Date currentDateTime = Date.from(Instant.now());
-				comentario.setData(currentDateTime);
-				getServices().add(comentario);
+			if (camposObrigatoriosValidados()) {
+				if (comentario.getAvaliacao() >= 0 && comentario.getAvaliacao() <= 5) {
+					Date currentDateTime = Date.from(Instant.now());
+					comentario.setData(currentDateTime);
+					getServices().add(comentario);
+				} else {
+					FacesContext facesContext = FacesContext.getCurrentInstance();
+					facesContext.addMessage("txt-avaliacao", new FacesMessage("A avaliação deve ser entre 0 e 5"));
+				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			return null;
 		}
+		comentario = new Comentarios();
+		return null;
 	}
 
 	public List<Comentarios> getListaComentarios() throws RemoteException {

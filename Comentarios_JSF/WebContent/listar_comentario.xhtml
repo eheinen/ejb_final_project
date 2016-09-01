@@ -7,40 +7,40 @@
 </h:head>
 
 <style>
-.order-table {
-	border-collapse: collapse;
+.comentario-table {
+	bcomentario-collapse: collapse;
 }
 
-.order-table-header {
+.comentario-table-header {
 	text-align: center;
 	background: none repeat scroll 0 0 #E5E5E5;
-	border-bottom: 1px solid #BBBBBB;
+	bcomentario-bottom: 1px solid #BBBBBB;
 	padding: 16px;
 }
 
-.order-table-odd-row {
+.comentario-table-odd-row {
 	text-align: center;
 	background: none repeat scroll 0 0 #FFFFFFF;
-	border-top: 1px solid #BBBBBB;
+	bcomentario-top: 1px solid #BBBBBB;
 }
 
-.order-table-even-row {
+.comentario-table-even-row {
 	text-align: center;
 	background: none repeat scroll 0 0 #F9F9F9;
-	border-top: 1px solid #BBBBBB;
+	bcomentario-top: 1px solid #BBBBBB;
 }
 </style>
 
 <h:body>
-
+	<a href="add_comentario.xhtml">Adicionar Comentários</a>
 	<h:dataTable value="#{comentarioMB.listaComentarios}" var="o"
-		styleClass="order-table" headerClass="order-table-header"
-		rowClasses="order-table-odd-row,order-table-even-row">
+		styleClass="comentario-table" headerClass="comentario-table-header"
+		rowClasses="comentario-table-odd-row,comentario-table-even-row">
 
 		<h:column>
 			<f:facet name="header">Data</f:facet>
 			<h:outputText value="#{o.data}">
-				<f:convertDateTime pattern="dd/MM/yyyy HH:mm" timeZone="GMT-3" />
+				<f:convertDateTime pattern="dd/MM/yyyy - HH:mm:ss" timeZone="GMT-3" />
 			</h:outputText>
 		</h:column>
 
