@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Comment_WS_Client">
-        <property name="context-root" value="Comment_WS_Client"/>
-        <property name="java-output-path" value="/Comment_WS_Client/build/classes"/>
-    </wb-module>
-</project-modules>
