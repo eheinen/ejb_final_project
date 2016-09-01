@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Adicionar Comentário</title>
+</h:head>
+<h:body>
+	<f:view>
+		<h:form>
+			<h:outputText value="Título" />
+			<h:inputText value="#{comentarioMB.comentario.titulo}" />
+			<br />
+			<h:outputText value="Assunto:" />
+			<h:inputText value="#{comentarioMB.comentario.assunto}" />
+			<br />
+			<h:outputText value="Avaliação:" />
+			<h:inputText value="#{comentarioMB.comentario.avaliacao}" />
+			<br />
+	
+			<h:commandButton value="Adicionar" action="#{comentarioMB.adicionarComentario()}" />
+			<br />
+			
+		</h:form>
+		
+		<a href="listar_comentario.xhtml">Listar Comentários</a>
+	</f:view>
+</h:body>
+</html>

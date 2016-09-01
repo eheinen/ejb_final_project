@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Listar Comentário</title>
+</h:head>
+
+<style>
+.order-table {
+	border-collapse: collapse;
+}
+
+.order-table-header {
+	text-align: center;
+	background: none repeat scroll 0 0 #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 16px;
+}
+
+.order-table-odd-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+	border-top: 1px solid #BBBBBB;
+}
+
+.order-table-even-row {
+	text-align: center;
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;
+}
+</style>
+
+<h:body>
+
+	<h:dataTable value="#{comentarioMB.listaComentarios}" var="o"
+		styleClass="order-table" headerClass="order-table-header"
+		rowClasses="order-table-odd-row,order-table-even-row">
+
+		<h:column>
+			<f:facet name="header">Data</f:facet>
+			<h:outputText value="#{o.data}">
+				<f:convertDateTime pattern="dd/MM/yyyy HH:mm" timeZone="GMT-3" />
+			</h:outputText>
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Titulo</f:facet>
+			<h:outputText value="#{o.titulo}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Assunto</f:facet>
+			<h:outputText value="#{o.assunto}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Avaliação</f:facet>
+			<h:outputText value="#{o.avaliacao}" />
+		</h:column>
+	</h:dataTable>
+
+</h:body>
+</html>
