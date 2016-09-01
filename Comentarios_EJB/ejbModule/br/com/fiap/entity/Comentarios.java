@@ -72,7 +72,7 @@ public class Comentarios implements Serializable {
 		return avaliacao;
 	}
 
-	public void setAvaliacao(int avaliacao) {
+	public void setAvaliacao(int avaliacao) throws Exception {	
 		this.avaliacao = avaliacao;
 	}
 	
