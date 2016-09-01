@@ -1,0 +1,46 @@
+package br.com.fiap.ws;
+
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import br.com.fiap.bean.ComentariosBeanRemote;
+import br.com.fiap.entity.Comentarios;
+
+@WebService(serviceName="comentarios") 
+public class ComentarioWSImp implements ComentarioWS {
+
+	@Override
+	@WebMethod
+	public void postarComentario(@WebParam(name="comentarios")Comentarios comentarios) {
+		try {
+			InitialContext ctx = new InitialContext();
+			ComentariosBeanRemote cbr = 
+					(ComentariosBeanRemote) ctx.lookup(
+							"/Comentarios_EJB/ComentariosBean!br.com.fiap.bean.ComentariosBeanRemote");
+			cbr.add(comentarios);
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public List<Comentarios> buscarComentarios() {
+		InitialContext ctx;
+		try {
+			ctx = new InitialContext();
+			ComentariosBeanRemote cbr = 
+					(ComentariosBeanRemote) ctx.lookup(
+							"/Comentarios_EJB/ComentariosBean!br.com.fiap.bean.ComentariosBeanRemote");
+			return cbr.getAll();
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

@@ -1,0 +1,60 @@
+package br.com.fiap.ws;
+
+public class ComentarioWSProxy implements br.com.fiap.ws.ComentarioWS {
+  private String _endpoint = null;
+  private br.com.fiap.ws.ComentarioWS comentarioWS = null;
+  
+  public ComentarioWSProxy() {
+    _initComentarioWSProxy();
+  }
+  
+  public ComentarioWSProxy(String endpoint) {
+    _endpoint = endpoint;
+    _initComentarioWSProxy();
+  }
+  
+  private void _initComentarioWSProxy() {
+    try {
+      comentarioWS = (new br.com.fiap.ws.ComentariosLocator()).getComentarioWSImpPort();
+      if (comentarioWS != null) {
+        if (_endpoint != null)
+          ((javax.xml.rpc.Stub)comentarioWS)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+        else
+          _endpoint = (String)((javax.xml.rpc.Stub)comentarioWS)._getProperty("javax.xml.rpc.service.endpoint.address");
+      }
+      
+    }
+    catch (javax.xml.rpc.ServiceException serviceException) {}
+  }
+  
+  public String getEndpoint() {
+    return _endpoint;
+  }
+  
+  public void setEndpoint(String endpoint) {
+    _endpoint = endpoint;
+    if (comentarioWS != null)
+      ((javax.xml.rpc.Stub)comentarioWS)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+    
+  }
+  
+  public br.com.fiap.ws.ComentarioWS getComentarioWS() {
+    if (comentarioWS == null)
+      _initComentarioWSProxy();
+    return comentarioWS;
+  }
+  
+  public br.com.fiap.ws.Comentarios_Type buscarComentarios() throws java.rmi.RemoteException{
+    if (comentarioWS == null)
+      _initComentarioWSProxy();
+    return comentarioWS.buscarComentarios();
+  }
+  
+  public void postarComentario(br.com.fiap.ws.Comentarios_Type comentarios) throws java.rmi.RemoteException{
+    if (comentarioWS == null)
+      _initComentarioWSProxy();
+    comentarioWS.postarComentario(comentarios);
+  }
+  
+  
+}

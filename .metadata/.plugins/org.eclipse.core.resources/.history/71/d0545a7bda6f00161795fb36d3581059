@@ -1,0 +1,48 @@
+package br.com.fiap.servlet;
+
+import java.io.IOException;
+import java.util.Date;
+import java.time.LocalDate;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import br.com.fiap.comentarios.jaxws.ComentarioPortType;
+import br.com.fiap.comentarios.jaxws.ComentarioPortTypeProxy;
+import br.com.fiap.comentarios.jaxws.Comentarios;
+
+@WebServlet("/comentarios")
+public class ComentariosServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public ComentariosServlet() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("comentarios.jsp");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String titulo = request.getParameter("titulo");
+		String assunto = request.getParameter("assunto");
+		String avaliacao = request.getParameter("avaliacao");
+		try{
+			ComentarioPortType comentarioSerice = new ComentarioPortTypeProxy();
+			Comentarios comentarios = new Comentarios();
+			comentarios.setAssunto(assunto);
+			comentarios.setAvaliacao(Integer.parseInt(avaliacao));
+			comentarios.setTitulo(titulo);
+			comentarios.setData(new Date().from());
+			comentarioSerice.add(comentarios);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		request.getRequestDispatcher("comentarios.jsp");
+	}
+
+}
