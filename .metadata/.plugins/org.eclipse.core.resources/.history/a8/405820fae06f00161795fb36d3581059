@@ -39,7 +39,6 @@ public class ComentariosServlet extends HttpServlet {
 			comentarios.setTitulo(titulo);
 			comentarios.setData(Date.from(Instant.now()));
 			comentarioService.add(comentarios);
-			System.out.println(comentarioService.getAll());
 			request.setAttribute("comentarios", comentarioService.getAll());
 			request.getRequestDispatcher("comentarios.jsp").forward(request, response);
 		}catch(Exception e){

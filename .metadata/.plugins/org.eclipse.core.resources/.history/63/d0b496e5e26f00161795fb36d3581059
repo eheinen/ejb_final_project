@@ -13,10 +13,8 @@
 	<form action="comentarios" method="post">
 		<label for="titulo">Título</label><br /> <input type="text"
 			name="titulo" /><br /> <label for="assunto">Assunto</label><br />
-		<input type="text" name="assunto" /><br /> 
-		<label for="avaliacao">Avaliação</label><br />
-		<input type="text" name="avaliacao" /><br /> 
-		<input type="submit" value="Postar"/>
+		<input type="text" name="assunto" /><br /> <label for="avaliacao">Avaliação</label><br />
+		<input type="text" name="avaliacao" /><br /> <input type="submit" />
 	</form>
 	<div>
 		<c:if test="${comentarios != null}">
