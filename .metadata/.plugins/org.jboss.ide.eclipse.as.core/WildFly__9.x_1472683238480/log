@@ -157,3 +157,102 @@
 
 !ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-08-31 21:41:33.561
 !MESSAGE Module Comentarios_WS_Cliente on WildFly  9.x  still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-31 21:43:19.777
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 21:43:19.988
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 21:43:19.995
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 21:43:21.038
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 21:43:23.340
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-08-31 21:43:38.690
+!MESSAGE Module Comentarios_WS_Cliente on WildFly  9.x  not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-08-31 21:43:58.703
+!MESSAGE Module Comentarios_WS_Cliente on WildFly  9.x  still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-31 21:45:17.735
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 21:45:18.794
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 21:45:40.983
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 21:45:42.050
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 21:45:44.353
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2016-08-31 21:46:53.989
+!MESSAGE Module Comentarios_WS_Cliente on WildFly  9.x  not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2016-08-31 21:47:14.001
+!MESSAGE Module Comentarios_WS_Cliente on WildFly  9.x  still not ready to be shown in browser. Aborting delay.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-31 21:47:50.352
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 21:47:50.544
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 21:48:36.813
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 21:48:37.874
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 21:48:40.077
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 21:51:10.785
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 21:51:16.617
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 21:51:17.694
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 21:51:19.996
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-31 21:56:31.858
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 21:56:32.075
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 21:56:32.084
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 21:56:33.142
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 21:56:35.345
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2016-08-31 22:07:25.420
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2016-08-31 22:07:25.651
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-08-31 22:07:25.658
+!MESSAGE The server "WildFly  9.x " requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_66 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-08-31 22:07:26.711
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-08-31 22:07:28.912
+!MESSAGE Server Startup Succeeded

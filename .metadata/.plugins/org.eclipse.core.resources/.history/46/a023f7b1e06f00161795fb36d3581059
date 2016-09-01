@@ -40,7 +40,7 @@ public class ComentariosServlet extends HttpServlet {
 			comentarios.setData(Date.from(Instant.now()));
 			comentarioService.add(comentarios);
 			request.setAttribute("comentarios", comentarioService.getAll());
-			request.getRequestDispatcher("comentarios.jsp").forward(request, response);
+			request.getRequestDispatcher("comentarios.jsp");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
